@@ -4,8 +4,7 @@ body {
 
 .page-wrapper {
   height: 100%;
-  background-image:
-    url(../images/landing-page/landing-background-image.jpg);
+  background-image: url(../images/landing-page/landing-background-image.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -42,7 +41,7 @@ header > nav {
   position: fixed;
   top: 0;
   text-align: center;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.8);
 }
 
 header > h1 {
