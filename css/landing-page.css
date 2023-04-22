@@ -5,7 +5,7 @@ body {
 .page-wrapper {
   height: 100%;
   background-image:
-    url(/images/warren-wong-fNUNt9w3m-Q-unsplash.jpg);
+    url(/images/Landing-Page/landing-background-image.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -101,7 +101,7 @@ main {
 
 #star-wars-trivia > button > a {
   text-decoration: none;
-  color: azure;
+  color: gold;
 }
 
 /* Contact */
