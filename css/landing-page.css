@@ -1,9 +1,12 @@
-.page-wrapper {
+body {
   height: 300%;
-  background-image: url(.././images/landing-page/landing-background-image.jpg);
+}
+
+.page-wrapper {
+  height: 100%;
+  background-image: url(../../images/landing-page/landing-background-image.jpg);
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
 }
 
 /* .banner-fade-in {
