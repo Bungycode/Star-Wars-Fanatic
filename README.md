@@ -1,4 +1,4 @@
-# Star-Wars-Fanatic
+# Star Wars Fanatic
 
 ![badge](https://img.shields.io/badge/license-mit-blue)
 
