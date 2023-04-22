@@ -1,3 +1,5 @@
 console.log("Hello World")
 
-fetch
+const baseApi = 'https://swapi.dev/api/'
+
+fetch(`${baseApi}people`)
