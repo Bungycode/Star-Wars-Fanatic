@@ -5,20 +5,20 @@ const baseApi = "https://swapi.dev/api/";
 const fetchCharacters = async () => {
   try {
     const starWarsMovieList= `${baseApi}films`;
-    // console.log(starWarsMovieList);
 
     const response = await fetch(starWarsMovieList);
     // console.log(response);
 
     const data = await response.json();
-    // console.log(data);
+    console.log(data);
 
     for (i = 0; i < data.results.length; i++) {
       const movieButtonEl = document.createElement("a");
-      // console.log(movieButtonEl);
       movieButtonEl.textContent = data.results[i].title;
       movieButtonEl.classList.add('movie-button')
       movieButtonEl.setAttribute("href", "./movie.html")
+      movieButtonEl.setAttribute("data-movie-url", data.results[i].url)
+      // console.log(data.results[i].url)
       movieListContainerEl.appendChild(movieButtonEl);
     }
     return console.log("All movies rendered!");
@@ -28,3 +28,9 @@ const fetchCharacters = async () => {
 };
 
 fetchCharacters();
+
+movieListContainerEl.addEventListener("click", (event) => {
+  console.log("Clicked this button")
+  console.log(event.target.dataset)
+  localStorage.setItem("movie-url", JSON.stringify(event.target.dataset))
+})

@@ -16,7 +16,7 @@ const fetchCharacters = async () => {
     // console.log(response);
 
     const data = await response.json();
-    // console.log(data);
+    console.log(data);
 
     for (i = 0; i < data.results.length; i++) {
       const characterButtonEl = document.createElement("a");
@@ -24,6 +24,9 @@ const fetchCharacters = async () => {
       characterButtonEl.textContent = data.results[i].name;
       characterButtonEl.classList.add("character-button");
       characterButtonEl.setAttribute("href", "./character.html");
+      // console.log(data.results[i].url)
+      characterButtonEl.setAttribute("data-character-url", data.results[i].url)
+
       characterListContainerEl.appendChild(characterButtonEl);
     }
 
@@ -42,9 +45,16 @@ const fetchCharacters = async () => {
 
 fetchCharacters();
 
+characterListContainerEl.addEventListener('click', event => {
+  // console.log(event.currentTarget)
+// console.log(event.target)
+console.log(event.target.dataset)
+localStorage.setItem("character-url", JSON.stringify(event.target.dataset))
+})
+
 // ES5 form of fetching data through .then()
 
-// fetch(getCharacters).then(function (response) {
+// fetch(getCharactersPage).then(function (response) {
 //   console.log(response)
 //   return response.json()
 // }).then(function (data) {
