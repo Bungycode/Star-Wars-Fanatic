@@ -36,7 +36,6 @@ header > h1 {
   top: 150px;
   text-align: center;
   color: aqua;
-  /* border: 1px solid white; */
 }
 
 /* Star Wars Trivia  */
@@ -52,7 +51,7 @@ main {
 }
 
 #star-wars-trivia > button {
-  font-size: 2.5rem;
+  font-size: 2rem;
   height: 33.3%;
   width: 49%;
   background: none;
@@ -67,12 +66,11 @@ main {
 }
 
 /* Contact */
-/* copy right */
-#contact {
+.get-in-touch {
   height: 33.3%;
 }
 
-#contact > p {
+.get-in-touch > p {
   font-size: 1.8rem;
   width: 80%;
   height: 90%;
@@ -80,23 +78,4 @@ main {
   margin: auto;
   text-align: center;
   padding-top: 75px;
-}
-
-#contact > div {
-  height: 10%;
-}
-
-#contact > div > p {
-  color: azure;
-  text-align: center;
-}
-
-#contact > div > p > a {
-  text-decoration: none;
-  color: gold;
-}
-
-#contact > div > p > a:visited {
-  text-decoration: none;
-  color: gold;
 }
