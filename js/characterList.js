@@ -1,5 +1,7 @@
-const charactersContainerEl = document.querySelector(".characters-container");
-// console.log(charactersContainerEl);
+const characterListContainerEl = document.querySelector(
+  ".character-list-container"
+);
+// console.log(characterListContainerEl);
 const baseApi = "https://swapi.dev/api/";
 let currentPage = 1;
 
@@ -17,11 +19,12 @@ const fetchCharacters = async () => {
     // console.log(data);
 
     for (i = 0; i < data.results.length; i++) {
-      const characterButtonEl = document.createElement("button");
+      const characterButtonEl = document.createElement("a");
       // console.log(characterButtonEl);
       characterButtonEl.textContent = data.results[i].name;
-      characterButtonEl.classList.add('character-button')
-      charactersContainerEl.appendChild(characterButtonEl);
+      characterButtonEl.classList.add("character-button");
+      characterButtonEl.setAttribute("href", "./character.html");
+      characterListContainerEl.appendChild(characterButtonEl);
     }
 
     nextPage = data.next;
@@ -30,7 +33,7 @@ const fetchCharacters = async () => {
     if (nextPage === null) {
       return console.log("All character pages rendered.");
     } else {
-      fetchCharacters()
+      fetchCharacters();
     }
   } catch (error) {
     console.log(error);
