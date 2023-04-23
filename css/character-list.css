@@ -6,8 +6,13 @@
   background-repeat: no-repeat;
 }
 
-p {
-  color: azure;
+header > h1 {
+  font-size: 2rem;
+  position: relative;
+  top: 50px;
+  text-align: center;
+  color: gold;
+  /* border: 1px solid white; */
 }
 
 .character-button {
