@@ -1,3 +1,5 @@
+/* Future task - remove all the height percentages and adjust to make GUI look good. Removing the height percentages will remove the 3 page look I gave it but make it look good in wide mobile view to where the content isn't overflowing into other content on the site. */
+
 body {
   height: 300%;
 }

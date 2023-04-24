@@ -41,13 +41,13 @@ const generateMovie = async () => {
     movieReleaseValue.textContent = movieData.created.substring(0, 4);
     movieDetailsContainerEl.appendChild(movieReleaseValue);
 
-    const movieOpenCrawlH2El = document.createElement("h2");
-    movieOpenCrawlH2El.textContent = "Open Crawl";
-    movieDetailsContainerEl.appendChild(movieOpenCrawlH2El);
+    const movieOpeningCrawlH2El = document.createElement("h2");
+    movieOpeningCrawlH2El.textContent = "Opening Crawl";
+    movieDetailsContainerEl.appendChild(movieOpeningCrawlH2El);
 
-    const movieOpenCrawlValue = document.createElement("p");
-    movieOpenCrawlValue.textContent = movieData.opening_crawl;
-    movieDetailsContainerEl.appendChild(movieOpenCrawlValue);
+    const movieOpeningCrawlValue = document.createElement("p");
+    movieOpeningCrawlValue.textContent = movieData.opening_crawl;
+    movieDetailsContainerEl.appendChild(movieOpeningCrawlValue);
 
     const movieCharactersH2El = document.createElement("h2");
     movieCharactersH2El.textContent = "Characters";

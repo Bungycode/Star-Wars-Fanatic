@@ -43,10 +43,6 @@ main > section > p {
   text-align: center;
 }
 
-main > section > p:last-child {
-  text-align: initial;
-}
-
 main > section > div {
   max-width: 600px;
   border-bottom: 4px solid azure;
@@ -59,7 +55,8 @@ main > section > div > a:visited {
   display: block;
   max-width: 250px;
   margin: auto;
-  padding: 5px 0 5px 50px;
+  padding: 5px 0;
+  text-align: center;
   text-decoration: none;
   color: gold;
   cursor: pointer;
