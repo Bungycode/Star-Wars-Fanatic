@@ -25,7 +25,7 @@ const generateCharacter = async () => {
     // Dynamically generate the character data
     const characterNameEl = document.createElement("h1");
     characterNameEl.textContent = characterData.name;
-    characterNameContainerEl.appendChild(characterNameEl);
+    characterNameContainerEl.prepend(characterNameEl);
 
     const characterBornH2El = document.createElement("h2");
     characterBornH2El.textContent = "DOB";

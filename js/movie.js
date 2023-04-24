@@ -23,7 +23,7 @@ const generateMovie = async () => {
     // Dynamically generate the movie data
     const movieNameEl = document.createElement("h1");
     movieNameEl.textContent = movieData.title;
-    movieNameContainerEl.appendChild(movieNameEl);
+    movieNameContainerEl.prepend(movieNameEl);
 
     const movieDirectorH2El = document.createElement("h2");
     movieDirectorH2El.textContent = "Director";
