@@ -10,7 +10,7 @@ const generateMovieList = async () => {
     // console.log(response);
 
     const data = await response.json();
-    console.log(data);
+    // console.log(data);
 
     for (i = 0; i < data.results.length; i++) {
       const movieButtonEl = document.createElement("a");
@@ -20,7 +20,7 @@ const generateMovieList = async () => {
       // console.log(data.results[i].url)
       movieListContainerEl.appendChild(movieButtonEl);
     }
-    return console.log("All movies rendered!");
+    console.log("All movies rendered!");
   } catch (error) {
     console.log(error);
   }
@@ -29,7 +29,6 @@ const generateMovieList = async () => {
 generateMovieList();
 
 movieListContainerEl.addEventListener("click", (event) => {
-  console.log("Clicked this button")
-  console.log(event.target.dataset)
+  // console.log(event.target.dataset)
   localStorage.setItem("movie-url", JSON.stringify(event.target.dataset))
 })

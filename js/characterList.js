@@ -16,7 +16,7 @@ const generateCharacterList = async () => {
     // console.log(response);
 
     const characterPageData = await fetchCharacterPageData.json();
-    console.log(characterPageData);
+    // console.log(characterPageData);
 
     for (i = 0; i < characterPageData.results.length; i++) {
       const characterButtonEl = document.createElement("a");
@@ -33,7 +33,7 @@ const generateCharacterList = async () => {
     // console.log(nextPage);
     currentPage++;
     if (nextPage === null) {
-      return console.log("All character pages rendered.");
+      console.log("All character pages rendered.");
     } else {
       generateCharacterList();
     }
@@ -47,7 +47,7 @@ generateCharacterList();
 characterListContainerEl.addEventListener("click", (event) => {
   // console.log(event.currentTarget)
   // console.log(event.target)
-  console.log(event.target.dataset);
+  // console.log(event.target.dataset);
   localStorage.setItem("character-url", JSON.stringify(event.target.dataset));
 });
 

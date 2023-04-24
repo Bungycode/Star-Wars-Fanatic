@@ -11,12 +11,12 @@ const generateMovie = async () => {
     const localStorageMovieData = JSON.parse(localStorage.getItem("movie-url"));
 
     const selectedMovieUrl = localStorageMovieData.movieUrl;
-    console.log(selectedMovieUrl);
+    // console.log(selectedMovieUrl);
 
     const fetchMovieData = await fetch(selectedMovieUrl);
-    console.log(fetchMovieData);
+    // console.log(fetchMovieData);
     movieData = await fetchMovieData.json();
-    console.log(movieData);
+    // console.log(movieData);
 
     const movieNameEl = document.createElement("h1");
     movieNameEl.textContent = movieData.title;
@@ -37,6 +37,7 @@ const generateMovie = async () => {
     const movieReleaseValue = document.createElement("p");
     movieReleaseValue.textContent = movieData.created.substring(0, 4);
     movieDetailsContainerEl.appendChild(movieReleaseValue);
+
     const movieOpenCrawlH2El = document.createElement("h2");
     movieOpenCrawlH2El.textContent = "Open Crawl";
     movieDetailsContainerEl.appendChild(movieOpenCrawlH2El);
@@ -53,7 +54,7 @@ const generateMovie = async () => {
     for (i = 0; i < movieData.characters.length; i++) {
       const movieCharactersValue = document.createElement("a");
       const fetchCharacterData = await fetch(movieData.characters[i]);
-      console.log(fetchCharacterData);
+      // console.log(fetchCharacterData);
       const characterData = await fetchCharacterData.json();
       const characterName = characterData.name;
       movieCharactersValue.textContent = characterName;
