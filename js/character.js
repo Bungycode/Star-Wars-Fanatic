@@ -7,18 +7,18 @@ const localStorageCharacterData = JSON.parse(
   localStorage.getItem("character-url")
 );
 console.log(localStorageCharacterData.characterUrl);
-const selectedCharacter = localStorageCharacterData.characterUrl;
-console.log(selectedCharacter);
+const selectedCharacterUrl = localStorageCharacterData.characterUrl;
+console.log(selectedCharacterUrl);
 
-fetch(selectedCharacter)
-  .then((response) => {
-    console.log(response);
-    return response.json();
+fetch(selectedCharacterUrl)
+  .then((fetchCharacterData) => {
+    console.log(fetchCharacterData);
+    return fetchCharacterData.json();
   })
-  .then((data) => {
-    console.log(data);
+  .then((characterData) => {
+    console.log(characterData);
 
     const characterNameEl = document.createElement("h1");
-    characterNameEl.textContent = data.name;
+    characterNameEl.textContent = characterData.name;
     characterNameContainerEl.appendChild(characterNameEl);
   });

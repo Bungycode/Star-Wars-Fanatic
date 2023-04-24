@@ -2,7 +2,7 @@ const movieListContainerEl = document.querySelector(".movie-list-container");
 // console.log(movieListContainerEl);
 const baseApi = "https://swapi.dev/api/";
 
-const fetchCharacters = async () => {
+const generateMovieList = async () => {
   try {
     const starWarsMovieList= `${baseApi}films`;
 
@@ -15,7 +15,6 @@ const fetchCharacters = async () => {
     for (i = 0; i < data.results.length; i++) {
       const movieButtonEl = document.createElement("a");
       movieButtonEl.textContent = data.results[i].title;
-      movieButtonEl.classList.add('movie-button')
       movieButtonEl.setAttribute("href", "./movie.html")
       movieButtonEl.setAttribute("data-movie-url", data.results[i].url)
       // console.log(data.results[i].url)
@@ -27,7 +26,7 @@ const fetchCharacters = async () => {
   }
 };
 
-fetchCharacters();
+generateMovieList();
 
 movieListContainerEl.addEventListener("click", (event) => {
   console.log("Clicked this button")

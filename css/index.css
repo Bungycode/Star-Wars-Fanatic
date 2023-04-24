@@ -40,14 +40,11 @@ footer {
 footer > p {
   color: azure;
   text-align: center;
+  border-bottom: none;
+  padding: 0;
 }
 
-footer > p > a {
-  text-decoration: none;
-  color: gold;
-}
-
-footer > p > a:visited {
+footer > p > a, footer > p > a:visited {
   text-decoration: none;
   color: gold;
 }
