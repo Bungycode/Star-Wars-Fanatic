@@ -29,7 +29,7 @@ Star-Wars-Fanatic is a web application that allows the user to learn all about S
 
 ![Character List](/images/character-list-page.png)
 ![Character](/images/character-page.png)
-![Movie List](/movie-list.html)
+![Movie List](/images/movie-list.html)
 ![Movie](/images/movie-page.png)
 
 ## Project Process
