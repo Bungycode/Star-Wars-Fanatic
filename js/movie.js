@@ -8,16 +8,19 @@ const generateMovie = async () => {
       ".movie-details-container"
     );
 
+    // Retrieve movie url from api
     const localStorageMovieData = JSON.parse(localStorage.getItem("movie-url"));
 
     const selectedMovieUrl = localStorageMovieData.movieUrl;
     // console.log(selectedMovieUrl);
 
+    // Use movie url to fetch movie data
     const fetchMovieData = await fetch(selectedMovieUrl);
     // console.log(fetchMovieData);
     movieData = await fetchMovieData.json();
     // console.log(movieData);
-
+    
+    // Dynamically generate the movie data
     const movieNameEl = document.createElement("h1");
     movieNameEl.textContent = movieData.title;
     movieNameContainerEl.appendChild(movieNameEl);
@@ -51,6 +54,7 @@ const generateMovie = async () => {
     movieDetailsContainerEl.appendChild(movieCharactersH2El);
 
     const movieCharactersContainer = document.createElement("div");
+    // Iterate through movie's characters and create dynamically in characters sections.
     for (i = 0; i < movieData.characters.length; i++) {
       const movieCharactersValue = document.createElement("a");
       const fetchCharacterData = await fetch(movieData.characters[i]);

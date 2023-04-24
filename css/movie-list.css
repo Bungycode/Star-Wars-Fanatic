@@ -30,3 +30,7 @@ section > a:visited {
   width: 200px;
   height: 50px;
 }
+
+section > a:hover {
+  color: gold;
+}

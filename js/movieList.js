@@ -12,6 +12,7 @@ const generateMovieList = async () => {
     const data = await response.json();
     // console.log(data);
 
+    // Iterate through movie data from api and dynamically generate list of movies.
     for (i = 0; i < data.results.length; i++) {
       const movieButtonEl = document.createElement("a");
       movieButtonEl.textContent = data.results[i].title;
@@ -28,6 +29,7 @@ const generateMovieList = async () => {
 
 generateMovieList();
 
+// Event listener for when movie name is clicked on
 movieListContainerEl.addEventListener("click", (event) => {
   // console.log(event.target.dataset)
   localStorage.setItem("movie-url", JSON.stringify(event.target.dataset))

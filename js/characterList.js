@@ -18,13 +18,17 @@ const generateCharacterList = async () => {
     const characterPageData = await fetchCharacterPageData.json();
     // console.log(characterPageData);
 
+    // Iterate through character data from api and dynamically generate list of characters.
     for (i = 0; i < characterPageData.results.length; i++) {
       const characterButtonEl = document.createElement("a");
       // console.log(characterButtonEl);
       characterButtonEl.textContent = characterPageData.results[i].name;
       characterButtonEl.setAttribute("href", "./character.html");
       // console.log(characterPageData.results[i].url)
-      characterButtonEl.setAttribute("data-character-url", characterPageData.results[i].url);
+      characterButtonEl.setAttribute(
+        "data-character-url",
+        characterPageData.results[i].url
+      );
 
       characterListContainerEl.appendChild(characterButtonEl);
     }
@@ -44,6 +48,7 @@ const generateCharacterList = async () => {
 
 generateCharacterList();
 
+// Event listener for when character name is clicked on
 characterListContainerEl.addEventListener("click", (event) => {
   // console.log(event.currentTarget)
   // console.log(event.target)

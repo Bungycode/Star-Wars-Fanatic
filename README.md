@@ -17,7 +17,7 @@
 
 ## [Description](#table-of-contents)
 
-Star-Wars-Fanatic is a web application that allows the user to learn all about Star Wars trivia! A user can get information about Star Wars characters, movies, and so much more!
+Star-Wars-Fanatic is a web application that allows the user to learn all about Star Wars trivia! A user can get information about Star Wars characters, movies, and more to come!
 
 ## Landing Page
 
@@ -25,9 +25,16 @@ Star-Wars-Fanatic is a web application that allows the user to learn all about S
 ![Star Wars Trivia](/images/Landing-Page/Star-Wars-Trivia.png)
 ![Contact](/images/Landing-Page/Contact.png)
 
+## Dynamic Pages
+
+![Character List](/images/character-list-page.png)
+![Character](/images/character-page.png)
+![Movie List](/movie-list.html)
+![Movie](/images/movie-page.png)
+
 ## Project Process
 
-The project technologies listed below was used to create a Front End web application integrated with a third party API called SWAPI that is tailored to the needs of the user.
+The project technologies listed below were used to create a Front End web application integrated with a third party API called SWAPI that is tailored to the needs of the user.
 
 The associated technologies include, but are not limited to:
 
@@ -39,15 +46,15 @@ The associated technologies include, but are not limited to:
 
 - GitHub to deploy this application Live (Listed below).
   
- Beyond using the aforementioned technologies, I took careful consideration to build a technology that meets the needs of the user. Concretely, this application serves the need for Star Wars fanatics to have a place where they can look up the different Star Wars movies and characters any time they want. More Star Wars data to come!
+ Beyond using the aforementioned technologies, I took careful consideration to build a technology that meets the needs of the user. Concretely, this application serves the need for Star Wars fanatics to have a place where they can look up the different Star Wars movies and characters any time they want. More Star Wars features to come!
  
- Upon being presented with the landing page, the user has a navigation bar at the top to navigate to Home (landing page), Star Wars Trivia (A will be routed to the characters or movies page), and Contact (to email me to have your own unique website created).
+ Upon being presented with the landing page, the user has a navigation bar at the top to navigate to Home (landing page), Star Wars Trivia (will route to the middle of the landing page), and Contact (to email me to have your own unique website created!).
 
 After clicking on "Star Wars Characters" or "Star Wars Movies", the user is presented with a trivia page that lists all the characters or movies. A user can then click on the different characters or movies to get routed to a page that lists the different details about that character or movie.
 
 ## [Installation](#table-of-contents)
 
-- To run the site, you can clone this repository down in the code editor of your choice, right click the landing-page.html file and open it via live server(if you have that installed) or default browser, it will then run locally in your browser.
+- To run this application, you can clone this repository down in the code editor of your choice, right click the index.html file and open it via live server(if you have that installed) or default browser, it will then run locally in your browser. Please note, the data from the api may take a few seconds to load!
 
 ## [License](#table-of-contents)
 
@@ -61,9 +68,9 @@ Contributions by:
 
 ## [Live Deploy](#table-of-contents)
 
-- [Star Wars Fanatic](https://bungycode.github.io/Star-Wars-Fanatic/)
+[Star Wars Fanatic](https://bungycode.github.io/Star-Wars-Fanatic/)
 
-- In the case, this link not work, please refer to the Github page repo for this project: https://github.com/Bungycode/Star-Wars-Fanatic
+- In the case, this link does not work, please refer to the Github page repo for this project: https://github.com/Bungycode/Star-Wars-Fanatic
 
 ## [Questions](#table-of-contents)
 

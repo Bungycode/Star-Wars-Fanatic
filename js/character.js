@@ -8,6 +8,7 @@ const generateCharacter = async () => {
       ".character-details-container"
     );
 
+    // Retrieve character url from api
     const localStorageCharacterData = JSON.parse(
       localStorage.getItem("character-url")
     );
@@ -15,11 +16,13 @@ const generateCharacter = async () => {
     const selectedCharacterUrl = localStorageCharacterData.characterUrl;
     // console.log(selectedCharacterUrl);
 
+    // Use character url to fetch character data
     const fetchCharacterData = await fetch(selectedCharacterUrl);
     // console.log(fetchCharacterData);
     characterData = await fetchCharacterData.json();
     // console.log(characterData);
 
+    // Dynamically generate the character data
     const characterNameEl = document.createElement("h1");
     characterNameEl.textContent = characterData.name;
     characterNameContainerEl.appendChild(characterNameEl);
@@ -57,10 +60,16 @@ const generateCharacter = async () => {
     characterDetailsContainerEl.appendChild(characterEyeColorValue);
 
     const characterMoviesH2El = document.createElement("h2");
-    characterMoviesH2El.textContent = "Movies";
+    // console.log(characterData.films.length)
+    if (characterData.films.length === 1) {
+      characterMoviesH2El.textContent = "Movie";
+    } else {
+      characterMoviesH2El.textContent = "Movies";
+    }
     characterDetailsContainerEl.appendChild(characterMoviesH2El);
 
     const characterMoviesContainer = document.createElement("div");
+    // Iterate through character's films and create dynamically in movies sections.
     for (i = 0; i < characterData.films.length; i++) {
       const characterMoviesValue = document.createElement("a");
       const fetchMovieData = await fetch(characterData.films[i]);
@@ -71,6 +80,13 @@ const generateCharacter = async () => {
       characterMoviesValue.textContent = movieName;
       characterMoviesValue.setAttribute("data-movie-url", movieData.url);
       // console.log(movieData.url)
+      if (characterData.films.length === 1) {
+        characterMoviesValue.setAttribute(
+          "style",
+          "text-align: center; padding-left: 0;"
+        );
+      }
+
       characterMoviesValue.setAttribute("href", "./movie.html");
       characterMoviesContainer.appendChild(characterMoviesValue);
       characterDetailsContainerEl.appendChild(characterMoviesContainer);
