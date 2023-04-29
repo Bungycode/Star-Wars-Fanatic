@@ -38,7 +38,8 @@ const generateMovie = async () => {
     movieDetailsContainerEl.appendChild(movieReleaseDateH2El);
 
     const movieReleaseValue = document.createElement("p");
-    movieReleaseValue.textContent = movieData.created.substring(0, 4);
+    movieReleaseValue.textContent = movieData.release_date.substring(0, 4);
+    console.log(movieData)
     movieDetailsContainerEl.appendChild(movieReleaseValue);
 
     const movieOpeningCrawlH2El = document.createElement("h2");
