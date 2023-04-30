@@ -19,40 +19,53 @@ const generateMovie = async () => {
     // console.log(fetchMovieData);
     movieData = await fetchMovieData.json();
     // console.log(movieData);
-    
+
     // Dynamically generate the movie data
     const movieNameEl = document.createElement("h1");
     movieNameEl.textContent = movieData.title;
     movieNameContainerEl.prepend(movieNameEl);
+    
+    // Create function to for creating movie details for better optimization.
+    const createMovieDetails = (movieDetailEl, content) => {
+      movieDetailEl.textContent = content;
+      movieDetailsContainerEl.appendChild(movieDetailEl)
+    }
 
     const movieDirectorH2El = document.createElement("h2");
-    movieDirectorH2El.textContent = "Director";
-    movieDetailsContainerEl.appendChild(movieDirectorH2El);
+    createMovieDetails(movieDirectorH2El, "Director");
+    // movieDirectorH2El.textContent = "Director";
+    // movieDetailsContainerEl.appendChild(movieDirectorH2El);
 
     const movieDirectorValue = document.createElement("p");
-    movieDirectorValue.textContent = movieData.director;
-    movieDetailsContainerEl.appendChild(movieDirectorValue);
+    createMovieDetails(movieDirectorValue, movieData.director);
+    // movieDirectorValue.textContent = movieData.director;
+    // movieDetailsContainerEl.appendChild(movieDirectorValue);
 
     const movieReleaseDateH2El = document.createElement("h2");
-    movieReleaseDateH2El.textContent = "Release Date";
-    movieDetailsContainerEl.appendChild(movieReleaseDateH2El);
+    createMovieDetails(movieReleaseDateH2El, "Release Date");
+    // movieReleaseDateH2El.textContent = "Release Date";
+    // movieDetailsContainerEl.appendChild(movieReleaseDateH2El);
 
     const movieReleaseValue = document.createElement("p");
-    movieReleaseValue.textContent = movieData.release_date.substring(0, 4);
-    console.log(movieData)
-    movieDetailsContainerEl.appendChild(movieReleaseValue);
+    createMovieDetails(movieReleaseValue, movieData.release_date.substring(0, 4));
+    // movieReleaseValue.textContent = movieData.release_date.substring(0, 4);
+    // console.log(movieData)
+    // movieDetailsContainerEl.appendChild(movieReleaseValue);
 
     const movieOpeningCrawlH2El = document.createElement("h2");
-    movieOpeningCrawlH2El.textContent = "Opening Crawl";
-    movieDetailsContainerEl.appendChild(movieOpeningCrawlH2El);
+    createMovieDetails(movieOpeningCrawlH2El, "Opening Crawl");
+    // movieOpeningCrawlH2El.textContent = "Opening Crawl";
+    // movieDetailsContainerEl.appendChild(movieOpeningCrawlH2El);
 
     const movieOpeningCrawlValue = document.createElement("p");
-    movieOpeningCrawlValue.textContent = movieData.opening_crawl;
-    movieDetailsContainerEl.appendChild(movieOpeningCrawlValue);
+    createMovieDetails(movieOpeningCrawlValue, movieData.opening_crawl);
+    // movieOpeningCrawlValue.textContent = movieData.opening_crawl;
+    // movieDetailsContainerEl.appendChild(movieOpeningCrawlValue);
 
     const movieCharactersH2El = document.createElement("h2");
-    movieCharactersH2El.textContent = "Characters";
-    movieDetailsContainerEl.appendChild(movieCharactersH2El);
+    createMovieDetails(movieCharactersH2El, "Characters");
+    // movieCharactersH2El.textContent = "Characters";
+    // movieDetailsContainerEl.appendChild(movieCharactersH2El);
 
     const movieCharactersContainer = document.createElement("div");
     // Iterate through movie's characters and create dynamically in characters sections.
