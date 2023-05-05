@@ -4,13 +4,6 @@ body {
   height: 300%;
 }
 
-.page-wrapper {
-  height: 100%;
-  background-image: url(../images/landing-background-image.jpg);
-  background-size: cover;
-  background-position: center;
-}
-
 /* .banner-fade-in {
   height: 100%;
   background-color: black;
@@ -32,7 +25,7 @@ body {
 } */
 
 /* Landing Page */
-header > h1 {
+.landing-page-wrapper h1 {
   font-size: 4rem;
   position: relative;
   top: 150px;

@@ -1,6 +1,30 @@
+/* page-wrapper */
+.landing-page-wrapper {
+  height: 100%;
+  background-image: url(../images/landing-background-image.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.page-wrapper {
+  background-image: url(../images/trivia/trivia-background-image.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
 /* Navbar */
 header {
   height: 33.3%;
+}
+
+header > h1 {
+  font-size: 2rem;
+  position: relative;
+  top: 80px;
+  text-align: center;
+  color: gold;
 }
 
 header > nav {
@@ -32,6 +56,30 @@ header > nav > ul > li > a {
   color: inherit;
 }
 
+/* is-favorite */
+
+.is-favorite {
+  display: block;
+  font-size: 1.2rem;
+  margin: auto;
+  background-color: transparent;
+  border: 4px azure solid;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.is-favorite.false {
+  color: azure;
+}
+
+.is-favorite.true {
+  color: aqua;
+}
+
+.is-favorite.true span {
+  color: gold;
+}
+
 /* Footer */
 footer {
   height: 10%;
@@ -44,7 +92,8 @@ footer > p {
   padding: 0;
 }
 
-footer > p > a, footer > p > a:visited {
+footer > p > a,
+footer > p > a:visited {
   text-decoration: none;
   color: gold;
 }

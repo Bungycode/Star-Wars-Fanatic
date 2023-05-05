@@ -8,6 +8,8 @@ const generateCharacter = async () => {
       ".character-details-container"
     );
 
+    const favoriteBtnContainer = document.querySelector(".favorite-button-container")
+    
     // Retrieve character url from api
     const localStorageCharacterData = JSON.parse(
       localStorage.getItem("character-url")
@@ -105,6 +107,9 @@ const generateCharacter = async () => {
       characterMoviesContainer.appendChild(characterMoviesValue);
       characterDetailsContainerEl.appendChild(characterMoviesContainer);
     }
+    // Event listener for favorite feature
+    
+    
     // Event listener for when movie name is clicked on
     characterDetailsContainerEl.addEventListener("click", (event) => {
       localStorage.setItem("movie-url", JSON.stringify(event.target.dataset));
